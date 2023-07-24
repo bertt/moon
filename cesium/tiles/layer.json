@@ -8,7 +8,7 @@
   "schema": "tms",
   "extensions": [ "octvertexnormals" ],
   "tiles": [ "{z}/{x}/{y}.terrain?v={version}" ],
-  "projection": "EPSG:9122",
+  "projection": "EPSG:4326",
   "bounds": [ 0.00, -90.00, 180.00, 90.00 ],
   "available": [
     [ { "startX": 0, "startY": 0, "endX": 1, "endY": 0 } ]
