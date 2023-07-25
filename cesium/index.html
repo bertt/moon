@@ -40,7 +40,8 @@
   };
 
   var terrainProvider = new Cesium.CesiumTerrainProvider({
-       url : './tiles'
+       url : './tiles',
+       ellipsoid: moonEllipsoid
     });
 
   let imagery = new Cesium.SingleTileImageryProvider(providerOptions);
