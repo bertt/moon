@@ -16,7 +16,5 @@ wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_512_00N_30N_000_0
 
 warp
 ```
-$ docker run -it -v d:\gisdata\moon:/data geodan/terrainwarp -c epsg:9122 
-$ docker run -it -v d:\gisdata\moon:/data geodan/terraintiler -b 5 -s 10
-
+$ docker run -it -v d:\gisdata\moon:/data geodan/terraintiler -b 3 -s 5
 ```
