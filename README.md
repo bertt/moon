@@ -24,7 +24,7 @@ create vrt in tmp
 ```
 $ mkdir tmp
 $ mv *.tif ./tmp
-$ gdalbuildvrt -a_srs EPSG:4326 tmp/ahn.vrt *.tif
+$ gdalbuildvrt -a_srs EPSG:4326 tmp/ahn.vrt tmp/*.tif
 ```
 
 warp
