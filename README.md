@@ -13,7 +13,7 @@ $ cat downloads.txt | parallel --bar wget {}
 convert to tifs
 
 ```
-$ find *.asc | parallel --bar 'gdalwarp {} {=s:JP2:tif:=}'
+$ find *.JP2 | parallel --bar 'gdalwarp {} {=s:JP2:tif:=}'
 ```
 
 create vrt in tmp
