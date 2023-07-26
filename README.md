@@ -2,19 +2,28 @@
 
 Data
 
+see downloads.txt
+
+Downloading:
+
 ```
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_0N_60N_000_120.JP2
+$ cat downloads.txt | parallel --bar wget {}
+```
 
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_0N_60N_120_240.JP2
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_0N_60N_240_360.JP2
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_60S_0S_000_120.JP2
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_60S_0S_120_240.JP2
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_256_60S_0S_240_360.JP2
-wget http://imbrium.mit.edu/DATA/SLDEM2015/TILES/JP2/SLDEM2015_512_00N_30N_000_045.JP2
+convert to tifs
 
+```
+$ find *.asc | parallel --bar 'gdalwarp {} {=s:JP2:tif:=}'
+```
+
+create vrt in tmp
+```
+$ mkdir tmp
+$ gdalbuildvrt -a_srs EPSG:4326 tmp/ahn.vrt *.tif
 ```
 
 warp
+
 ```
 $ docker run -it -v d:\gisdata\moon:/data geodan/terraintiler -b 3 -s 5
 ```
