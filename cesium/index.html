@@ -32,7 +32,6 @@
       ellipsoid: ellipsoid
     });
 
-
     var imagery = new Cesium.WebMapServiceImageryProvider({
     url : 'https://webmap.lroc.asu.edu/',
     layers : 'luna_wac_global',
@@ -57,14 +56,10 @@
 
     viewer.scene.terrainProvider = terrainProvider;
     viewer.scene.globe.enableLighting = true;
-    viewer.scene.globe.terrainExaggeration = 10;
-    viewer.camera.position.x = -2116936.5666225953;
-    viewer.camera.position.y = 1401705.5990734915;
-    viewer.camera.position.z=1219628.4736516785;
-
+    viewer.scene.globe.terrainExaggeration = 5;
+    viewer.camera.position = {x: 496740.98669827846, y: 1892678.2974615628, z: 1217792.475240068};
 
     viewer.camera.setView({
-      // destination : new Cesium.Cartesian3(0.008005404614980343,1.2157050345647304, 1740735.7630970082, ellipsoid),
       orientation: {
         heading : Cesium.Math.toRadians(0),
         pitch : Cesium.Math.toRadians(-90),
