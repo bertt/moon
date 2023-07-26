@@ -2,7 +2,7 @@
 
 Demo
 
-https://bertt.github.io/moon/
+https://bertt.github.io/moon/cesium/
 
 Data
 
